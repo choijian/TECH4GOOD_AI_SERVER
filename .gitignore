@@ -166,3 +166,8 @@ cython_debug/
 */migrations/*.pyc
 */migrations/*.pyo
 */migrations/*-state.json
+
+# Django static files
+staticfiles/
+=======
+*/migrations/*-state.json
