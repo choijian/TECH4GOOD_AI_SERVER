@@ -59,4 +59,8 @@ class ChatbotView(APIView):
         # Run
         answer = chain.invoke({'context': (format_docs(docs)), 'question':question})
         
-        return Response(answer, status=status.HTTP_200_OK)
+        response_data = {
+            "answer": answer
+        }
+        
+        return Response(response_data, status=status.HTTP_200_OK)
