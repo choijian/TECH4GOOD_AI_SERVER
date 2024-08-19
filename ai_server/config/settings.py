@@ -123,6 +123,26 @@ AUTH_PASSWORD_VALIDATORS = [
 CORS_ALLOW_ALL_ORIGINS = True #(모든 포트 허용)
 CORS_ALLOW_CREDENTIALS = True
 
+#HTTP methods 추가
+CORS_ALLOW_METHODS = (
+"DELETE",
+"GET",
+"OPTIONS",
+"PATCH",
+"POST",
+"PUT",
+)
+
+#원하는 헤더 추가
+CORS_ALLOW_HEADERS = (
+"accept",
+"authorization",
+"content-type",
+"user-agent",
+"x-csrftoken",
+"x-requested-with",
+)
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
