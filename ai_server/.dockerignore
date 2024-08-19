@@ -8,6 +8,7 @@
 
 # 로컬 개발 환경 설정 파일
 .env
+venv/
 
 # Django의 정적 파일 및 컬렉트된 정적 파일
 #static/
