@@ -101,7 +101,8 @@ DATABASES = {
         'PORT': env("DB_PORT2"),
     },
 }
-    
+
+DATABASE_ROUTERS = ['config.database_routers.EmbeddingRouter']    
 
 #DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 #STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'

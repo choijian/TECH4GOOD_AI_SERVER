@@ -20,4 +20,5 @@ from django.urls import path, include
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("chatbot/", include("chatbot.urls")),  # matching 관련
+    path('matching/', include('matching.urls')),  # matching 관련
 ]
