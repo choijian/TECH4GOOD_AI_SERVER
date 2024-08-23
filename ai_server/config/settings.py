@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     #앱
     "chatbot", #QnA 봇 기능
+    "matching", #멘토 매칭 기능
 ]
 
 MIDDLEWARE = [
@@ -89,8 +90,19 @@ DATABASES = {
         'PASSWORD': env("DB_PASSWORD"),
         'HOST': env("DB_HOST"),
         'PORT': env("DB_PORT"),
-    }
+    },
+    
+    'embedding': {
+        'ENGINE':'django.db.backends.postgresql_psycopg2',
+        'NAME': env("DB_NAME2"),
+        'USER': env("DB_USER2"),
+        'PASSWORD': env("DB_PASSWORD2"),
+        'HOST': env("DB_HOST2"),
+        'PORT': env("DB_PORT2"),
+    },
 }
+
+DATABASE_ROUTERS = ['config.database_routers.EmbeddingRouter']    
 
 #DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 #STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
